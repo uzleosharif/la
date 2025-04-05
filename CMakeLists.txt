@@ -13,8 +13,12 @@ set(CMAKE_CXX_MODULE_STD ON)
 
 
 
-add_library(la INTERFACE)
-target_compile_features(la INTERFACE cxx_std_26)
+add_library(la SHARED)
+target_compile_features(la PRIVATE cxx_std_26)
+target_sources(la PUBLIC
+  FILE_SET moduels TYPE CXX_MODULES
+    FILES la.cppm
+)
 
 add_executable(test)
 target_sources(test PRIVATE main.cpp)

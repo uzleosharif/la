@@ -2,11 +2,11 @@
 
 // SPDX-License-Identifier: MIT
 
-#pragma once
+export module la;
 
 import std;
 
-namespace la {
+export namespace la {
 
 template <class ElementType, std::size_t kNumRows, std::size_t kNumCols>
 class Matrix final {

@@ -1,7 +1,7 @@
 
-#include "la.hpp"
 
 import std;
+import la;
 
 auto main() -> int {
   la::Matrix<int, 4, 3> matrix_a{};
